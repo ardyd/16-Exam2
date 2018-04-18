@@ -158,13 +158,16 @@ def problem2(n, seq):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-    new_seq = []
+    new_seq = [0, 1, 2]
+    t = 0
     for k in range(len(seq)):
         if seq[k] < n:
-            new_seq += seq[k]
-            if new_seq == 3:
+            new_seq[t] = seq[k]
+            t += 1
+            if len(new_seq) == 3:
                 return new_seq
-    return 'Too Few'
+    return 'Too few'
+
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
