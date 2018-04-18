@@ -261,9 +261,10 @@ def problem4b(list_of_tuples_of_strings):
     # -------------------------------------------------------------------------
 
     for k in range(len(list_of_tuples_of_strings)):
-        x = list_of_tuples_of_strings[k]
-        if is_prime(x[k]) is True:
-            return True
+        for r in range(len(list_of_tuples_of_strings[k])):
+            x = [list_of_tuples_of_strings[k]]
+            if is_prime(x[r]) is True:
+                return True
     return False
 
 
