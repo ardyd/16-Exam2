@@ -158,12 +158,10 @@ def problem2(n, seq):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-    new_seq = [0, 1, 2]
-    t = 0
+    new_seq = []
     for k in range(len(seq)):
         if seq[k] < n:
-            new_seq[t] = seq[k]
-            t += 1
+            new_seq += [seq[k]]
             if len(new_seq) == 3:
                 return new_seq
     return 'Too few'
